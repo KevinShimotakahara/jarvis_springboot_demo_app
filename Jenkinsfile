@@ -10,15 +10,15 @@ pipeline {
         AZ_TENANT=credentials('AZ_TENANT_DEV')
 
         //Build
-        ACR_NAME='acrJarvisEdward2'
+        ACR_NAME='acrJarvisKevinShimotakahara2'
         //${BUILD_NUMBER} is a Jenkins built-in env https://bit.ly/32mySlQ
         //Note: double quote is neccessary here
         IMAGE_NAME="springboot_demo_app:${BUILD_NUMBER}"
 
         //Deploy
-        RESOURCE_GROUP='rg-traindg-app-aks'
+        RESOURCE_GROUP='rg-trading-app-aks'
         CLUSTER_NAME='aks-trading-app'
-        DOCKER_REPO='acrjarvisedward2.azurecr.io'
+        DOCKER_REPO='acrjarviskevinshimotakahara2.azurecr.io'
         DEPLOYMENT_NAME='deployment.apps/springboot-demo-app-dev'
     }
 
